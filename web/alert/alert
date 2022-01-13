@@ -1,0 +1,44 @@
+<style>
+.alert {
+  padding: 1%;
+  background-color: #f44336;
+  color: white;
+  transition: opacity 0.5s;
+  margin-bottom: 2%;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  right: 0;
+  top: 0;
+  text-align:center;
+}
+
+.alert.success {background-color: #4CAF50;}
+.alert.warning {background-color: #ff9800;}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+</style>
+
+<div id="AlertMsg">
+<span id="closebtn" class="closebtn">&times;</span>  
+<strong><span id="AltRes"></span></strong>   <span id="AltMSG"></span>
+</div>
+
+<script>
+	$("#closebtn").on("click", function() {
+		$("#AlertMsg").hide();
+	});
+</script>

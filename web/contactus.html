@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>Contact us</title>
+<link rel="stylesheet" type="text/css" media="all" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="css/theme.css">
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="js/validate.js"></script>
+<script src="js/contactus.js"></script>
+</head>
+<body>
+
+<div class="container-fluid center-block vertical-center">
+<div id="Alert"></div>
+
+
+<div class="formDIV" style="width:70%;">
+<div class="row">
+			<h2 style="padding-left:5%">CONTACT US</h2>
+			<div class="col-sm-5">
+			<form id="contactusForm" method="post">
+				<div id="NameGroup" class="form-group">
+					<label for="inputName">Name:</label>
+					<div class="input-group">
+							<span class="input-group-addon">
+							<span class="glyphicon glyphicon-user"></span>
+							</span>
+							<input type="text" name="name" class="form-control" id="inputName" placeholder="Enter Name" maxlength="32" required />
+					</div>
+				</div>
+				<div id="EmailGroup" class="form-group">
+					<label for="inputEmail">Email:</label>
+					<div class="input-group">
+							<span class="input-group-addon">
+							<span class="glyphicon glyphicon-envelope"></span>
+							</span>
+							<input type="text" name="email" class="form-control" id="inputEmail" placeholder="Enter Email" maxlength="32" required />
+					</div>	
+				</div>
+				<div id="SubjectGroup" class="form-group">
+					<label for="inputSubject">Subject:</label>
+					<div class="input-group">
+					    <select name="subject" class="form-control" id="inputSubject" required>
+						<option value='' selected disabled>Select subject</option>
+						<option value='Technical problem'>Technical problem</option>
+						<option value='Feedback'>Feedback</option>
+						<option value='Close account'>Close account</option>
+						</select>
+					</div>
+				</div>
+				<div id="CommentGroup" class="form-group">
+					<label for="inputComment">Comment:</label>
+					<div class="input-group">
+							<span class="input-group-addon">
+							<span class="glyphicon glyphicon-list-alt"></span>
+							</span>
+							<textarea class="form-control" name="comment" rows="5" id="inputComment" maxlength="2000" required></textarea>
+					</div>	
+				</div>
+				
+				<div class="form-group">
+				<button id="submitBtn" class="btn btn-primary btn-block">Submit</button>
+				</div>	
+			</form>
+			</div>
+			
+			<div class="col-sm-7">
+				<div class="row-sm-4">
+					<div class="container-fluid" style="background-color: #4A584A; border-radius: 15px; padding:1%;">
+						<div class="col-sm-2" style="padding-left: 2%;padding-top: 3%;">
+						<span class="glyphicon glyphicon-send" style="color:#00C5CB; font-size: 400%;"></span>
+						</div>
+						<div class="col-sm-10">
+							<span style="font-size: 200%; color:#E5E5E5;"> Need 24/7 Support?</p>
+							<input type="button" class="btn btn-primary btn-block" style="background-color:#00C5CB;" onclick="window.location.href='mailto:ClientServerProjectBraude@gmail.com?subject=Title';" value="CONTACT SUPPORT" />
+						</div>	
+						
+					</div>
+				</div>
+				
+				<div class="col" style="padding-left:20%">
+					<div class="row-sm-3" style="padding-top:10%;"></div>
+					<div class="row-sm-3">
+						<span class="glyphicon glyphicon-phone-alt" style="color:#028E1A; font-size: 400%;  "></span>
+						<label style="font-size:150%;">CALL SALES NOW<br>+972-055-5555555</label>
+					</div>
+					<div class="row-sm-3" style="padding-top:5%;"></div>
+					<div class="row-sm-3">
+						<span class="glyphicon glyphicon-time" style="color:#028E1A; font-size: 400%"></span>
+						<label style="font-size:150%;">SALES HOURS<br>7AM - 7PM CST</label>
+					</div>
+				</div>
+			
+			</div>
+			
+</div>
+</div>
+
+
+ </div>	
+<footer>
+<a href="./contact-us">Contact support</a>
+<br>© 2019 footer footer.  All rights reserved
+</footer>
+</body>
+</html>

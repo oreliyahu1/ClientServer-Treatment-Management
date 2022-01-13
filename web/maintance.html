@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>Maintance</title>
+<link rel="stylesheet" type="text/css" media="all" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="css/theme.css">
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="js/validate.js"></script>
+<script src="js/maintance.js"></script>
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" />
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+</head>
+<body>
+			
+<div class="container-fluid">
+<div id="Alert"></div>
+<div id="Confirmation" class="modal"></div>
+
+<div class="col center-block">
+	<div class="row">
+		<ul class="nav navbar-nav navbar-right" style="position:absolute">
+		<button id="logoutBtn" class="btn btn-primary btn-block">Logout</button>
+		</ul>
+	</div>
+	<div class="row center-block vertical-center">
+		<div class="col-sm-3">
+			<div class="formDIV" style="width:100%;">
+					<h2 id="ControllerType" style="text-align:center">Add Treatment</h2>
+					<form id="TreatmentForm" method="post">
+						<input type="hidden" id="TreatmentID" value=""/>
+						<div id="CarGroup" class="form-group">
+							<label for="inputCar">Car:</label>
+							<div class="input-group">
+									<span class="input-group-addon">
+									<span class="glyphicon glyphicon-road"></span>
+									</span>
+									<input type="text" name="carid" class="form-control" id="inputCarID" placeholder="Enter Car Number" maxlength="32" required />
+							</div>	
+						</div>
+						<div id="CustomerNameGroup" class="form-group">
+							<label for="inputCustomerName">Customer:</label>
+							<div class="input-group">
+									<span class="input-group-addon">
+									<span class="glyphicon glyphicon-user"></span>
+									</span>
+									<input type="text" name="customername" class="form-control" id="inputCustomerName" placeholder="Enter Name" maxlength="32" required />
+							</div>
+						</div>
+						<div id="CustomerIDGroup" class="form-group">
+							<label for="inputCustomerID">Customer ID:</label>
+							<div class="input-group">
+									<span class="input-group-addon">
+									<span class="glyphicon glyphicon-menu-right"></span>
+									</span>
+									<input type="text" name="customerid" class="form-control" id="inputCustomerID" placeholder="Enter Customer ID" maxlength="32" required />
+							</div>	
+						</div>
+						<div id="StatusGroup" class="form-group">
+							<label for="inputStatus">Status:</label>
+							<div class="input-group">
+								<select name="status" class="form-control" id="inputStatus" required>
+								<option value='' selected disabled>Select status</option>
+								<option value='Waiting'>Waiting</option>
+								<option value='In process'>In process</option>
+								<option value='Done'>Done</option>
+								</select>
+							</div>
+						</div>
+						<div id="DetailsGroup" class="form-group">
+							<label for="inputDetails">Details of treatment:</label>
+							<div class="input-group">
+									<span class="input-group-addon">
+									<span class="glyphicon glyphicon-list-alt"></span>
+									</span>
+									<textarea class="form-control" name="details" rows="5" id="inputDetails" maxlength="2000" style="resize: none;" required></textarea>
+							</div>	
+						</div>
+						
+						<div class="form-group">
+						<button id="submitBtn" class="btn btn-primary btn-block">Submit</button>
+						</div>	
+					</form>
+			</div>	
+		</div>
+		<div class="col-sm-9" style="width:100%; margin-top: 0%;">
+			<div class="formDIV">
+					<h2 style="text-align:center">Treatments</h2>
+					<table id="treatmentsTable" class="display table-striped table-bordered" style="word-break: break-all;">
+					  <thead>
+						<tr>
+						  <th></th>
+						  <th>No.</th>
+						  <th>Car</th>
+						  <th>Customer</th>
+						  <th>Customer ID</th>
+						  <th>Status</th>
+						  <th>Action</th>
+						</tr>
+					  </thead>
+					</table>
+			</div>
+		</div>
+	</div>
+</div>
+
+</div>
+ 
+<footer>
+<a href="./contact-us">Contact support</a>
+<br>© 2019 footer footer.  All rights reserved
+</footer>
+ </body>
+</html>
